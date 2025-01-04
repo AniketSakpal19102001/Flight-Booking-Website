@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 function HeroSection() {
   return (
     <>
-      <div className="flex items-center justify-center w-full  h-[80vh] bg-blue-400">
+      <div className="flex items-center justify-center w-full h-[95vh]  md:h-[92vh] bg-blue-400">
         <div className="flex flex-col justify-center items-center py-24 md:py-0">
           <div className="block md:hidden w-[80%] mx-auto mb-6">
             <img
