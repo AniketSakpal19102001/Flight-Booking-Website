@@ -10,11 +10,14 @@ function SearchFlights() {
   const {
     data: flightData,
     isLoading,
+    error,
     refetch,
   } = useGetAllFlightsQuery(undefined, {
     refetchOnMountOrArgChange: true,
     staleTime: 0,
   });
+  console.log("error:", error);
+  console.log("flight:", flightData);
 
   useEffect(() => {
     if (flightData) {
