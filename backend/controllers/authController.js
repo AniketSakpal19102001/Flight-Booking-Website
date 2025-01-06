@@ -67,7 +67,11 @@ export const handleLogin = catchAsync(async (req, res, next) => {
 
   user.password = undefined;
 
-  res.cookie("token", token, { httpOnly: true, secure: true });
+  res.cookie("token", token, {
+    httpOnly: true,
+    secure: true,
+    sameSite: "None",
+  });
 
   res.status(200).json({
     status: "success",

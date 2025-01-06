@@ -5,6 +5,7 @@ import catchAsync from "../utils/catchAsync.js";
 import { promisify } from "util";
 export default catchAsync(async (req, res, next) => {
   const token = req.cookies.token;
+  console.log(token);
   if (!token)
     return next(
       new appError("You are not logged in. Please log in first.", 401)
